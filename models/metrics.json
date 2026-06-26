@@ -1,7 +1,7 @@
 {
   "best_model": "Logistic Regression",
   "threshold": 0.10128171765840466,
-  "base_results": {
+  "results": {
     "Logistic Regression": {
       "roc_auc": 0.8434136764060037,
       "pr_auc": 0.6709726254274696,
@@ -52,5 +52,15 @@
       21,
       353
     ]
-  ]
+  ],
+  "business_impact": {
+    "tp": 353,
+    "fp": 535,
+    "fn": 21,
+    "tn": 500,
+    "saved": 176500,
+    "lost": 10500,
+    "wasted": 26750,
+    "net": 139250
+  }
 }
