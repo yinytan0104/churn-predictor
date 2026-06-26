@@ -1,13 +1,12 @@
 """
 train.py
 ---------
-Step 2: train classifiers with SMOTE, threshold calibration, hyperparameter
-tuning, and output ROC / calibration / SHAP plots for the Streamlit app.
+Trains four classifiers on the processed churn dataset, selects and tunes the
+best by ROC-AUC, and writes the model, evaluation metrics, and diagnostic plots.
 
-Run it with:   python train.py   (after prepare.py)
-Reads  data/processed.csv  ->  writes  models/  (model, metrics, plots)
+Reads  data/processed.csv  ->  writes  models/  (model.joblib, metrics.json, *.png)
 
-Set SEARCH_ITER=3 for a fast CI run; default is 20.
+Set SEARCH_ITER=3 env var for a fast CI run; default is 20.
 """
 
 import json

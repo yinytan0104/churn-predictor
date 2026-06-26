@@ -10,8 +10,6 @@ An end-to-end ML pipeline that predicts which telecom customers are likely to ca
 
 Built on the [Telco Customer Churn dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) — 7,043 customers, 26.5% churn rate.
 
-> **Live demo:** [deploy to Streamlit Cloud and paste your URL here]
-
 ---
 
 ## Results
@@ -87,10 +85,9 @@ streamlit run app.py             # open http://localhost:8501
 
 ### Deploy to Streamlit Community Cloud (free)
 
-1. Push this repo to GitHub (already done)
-2. Go to [share.streamlit.io](https://share.streamlit.io) → **New app**
-3. Point it at `app.py` in this repo
-4. Add a secret or run `python train.py` locally and commit `models/` — or add a startup script
+1. Go to [share.streamlit.io](https://share.streamlit.io) → **New app**
+2. Select this repo, branch `main`, file `app.py`
+3. Click **Deploy** — `model.joblib` is committed so the app loads immediately
 
 ---
 
@@ -109,7 +106,7 @@ churn-predictor/
 │   ├── telco.csv         # raw dataset (7,043 customers, 21 columns)
 │   └── processed.csv     # engineered features (38 columns)
 └── models/
-    ├── model.joblib       # trained model + metadata (gitignored — run train.py)
+    ├── model.joblib       # trained model + metadata
     ├── metrics.json       # ROC-AUC, recall, business impact
     ├── roc_curve.png      # saved by train.py
     ├── calibration_curve.png
@@ -130,6 +127,6 @@ churn-predictor/
 
 ---
 
-## Resume bullet
+## Resume
 
 > Built an end-to-end churn classification pipeline (ROC-AUC 0.843, 94% recall) on 7,000+ telecom customers; handled class imbalance with SMOTE and F2-optimal threshold calibration; added SHAP explainability, calibration curves, and a live Streamlit app that translates model output into estimated campaign revenue.

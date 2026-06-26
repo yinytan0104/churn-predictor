@@ -1,11 +1,11 @@
 """
 app.py
 -------
-Step 3: the live Streamlit app. Two tabs:
-  • Predict  — enter a customer's details, get churn probability + business impact
+Streamlit dashboard for the churn predictor. Two tabs:
+  • Predict          — enter a customer's details, get churn probability + business impact
   • Model performance — ROC curve, calibration curve, SHAP summary
 
-Run it with:   streamlit run app.py
+Run with:   streamlit run app.py
 """
 
 import json
